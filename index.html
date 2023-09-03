@@ -1,0 +1,38 @@
+// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://visa.vfsglobal.com/ind/en/hun/your-details
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=vfsglobal.com
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    const dataObject = {
+        firstName: 'Nazmul',
+        lastName: 'Islam',
+        dob: '05-01-2000',
+        passportNumber: '123456789',
+        passportExpirtyDate: '12-30-2025',
+        countryCode: '+880',
+        phoneNumber: '1316861760',
+        email: 'jobayer@webflixo.com',
+    };
+
+    const setValue =() =>{
+        document.getElementsByTagName("input")[0].value=dataObject.firstName;
+        document.getElementsByTagName("input")[1].value=dataObject.lastName;
+        document.getElementsByTagName("input")[2].value=dataObject.dob;
+        document.getElementsByTagName("input")[3].value=dataObject.passportNumber;
+        document.getElementsByTagName("input")[4].value=dataObject.passportExpirtyDate;
+        document.getElementsByTagName("input")[5].value=dataObject.countryCode;
+        document.getElementsByTagName("input")[6].value=dataObject.phoneNumber;
+        document.getElementsByTagName("input")[7].value=dataObject.email;
+
+    }
+    setTimeout(setValue, 5000);
+})();
